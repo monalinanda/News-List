@@ -87,8 +87,6 @@ a {
 .card-inner {
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
 }
 
 .card-front
@@ -107,5 +105,15 @@ a {
 @media (max-width: 500px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+  .image{
+    width:130px;
+    height: 130px;
+  }
+  .image-title-container-flex p{
+    font-size: 10px;
+  }
+  .search-item{
+    min-width: 0px;
   }
 }
