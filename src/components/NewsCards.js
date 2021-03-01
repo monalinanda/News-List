@@ -5,6 +5,9 @@ import { fetchNews,fetchOnenews,searchnews} from ".././actions";
 import { Link } from "react-router-dom";
 
 class NewsCards extends Component {
+  state={
+    isLoading : true
+  }
   componentDidMount() {
     this.props.fetchNews();
   }
@@ -12,7 +15,7 @@ class NewsCards extends Component {
     return !this.state.isLoading ? (
       <div>spiner</div>
     ) : (
-      <div>
+      <div className="container">
         <input  className ="search-item" value={this.props.text}  onChange={(e) =>
               this.props.searchnews(this.props.news, e.target.value)} placeholder="Search..."/>
       <section className="cards">

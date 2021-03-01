@@ -5,7 +5,11 @@ import Image from "./Image";
 export default class NewsCardItem extends Component {
   render() {
     return (
-      <div className={this.props.className} id={this.props.source.id}>
+      <div className={
+        this.props.display
+          ? "details-card"
+          : "card"
+      } id={this.props.source.id}>
         <div className="card-inner">
           <div className="card-front">
             <div className="nav-bar flex font-bold">
