@@ -13,8 +13,8 @@ export default class NewsCardItem extends Component {
         <div className="card-inner">
           <div className="card-front">
             <div className="nav-bar flex font-bold">
-              <div className="source-name">{this.props.source.name}</div>
-              <div className="author-name">{this.props.item.author}</div>
+              <div className="source-name font-12px">{this.props.source.name}</div>
+              <div className="author-name font-12px">{this.props.item.author}</div>
             </div>
             <div
               className={
@@ -24,7 +24,7 @@ export default class NewsCardItem extends Component {
               }
             >
               <Image urlToImage={this.props.item.urlToImage} alt="" />
-              <p>Title : {this.props.item.title}</p>
+              <p><span>Title:</span> {this.props.item.title}</p>
             </div>
             {this.props.display ? (
               <NewsDetails details={this.props.item.description} />
