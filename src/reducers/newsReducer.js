@@ -10,15 +10,10 @@ export default (state = { INITIAL_STATE }, action) => {
         newslists: action.payload,
       };
     case FETCH_ONE_NEWS:
-      return {
+      return{
         ...state,
-        newslists: [
-          ...state.newslists.filter((item) => {
-            return item.source.id === action.payload;
-          }),
-        ],
-      };
-
+        newslists:[action.payload]
+      }
     default:
       return state;
   }

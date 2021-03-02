@@ -1,18 +1,11 @@
 import React, { Component } from "react";
 import NewsCardItem from "./NewsCardItem";
 import { connect } from "react-redux";
-import { fetchOnenews } from ".././actions";
 
 class NewsDetailsPage extends Component {
   state = {
     display: true,
   };
-  componentDidMount() {
-    const { id } = this.props.match.params;
-    this.props.fetchOnenews(id);
-    console.log(this.props.fetchOnenews(id), "id");
-  }
-
   render() {
     return (
       <div className="details-conainer">
@@ -30,6 +23,7 @@ class NewsDetailsPage extends Component {
   }
 }
 const mapStateToProps = (state) => {
+  console.log(state,"state")
   return { news: state.news.newslists };
 };
-export default connect(mapStateToProps, { fetchOnenews })(NewsDetailsPage);
+export default connect(mapStateToProps)(NewsDetailsPage);
